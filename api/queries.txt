@@ -1,0 +1,10 @@
+CREATE TABLE users(id INT PRIMARY KEY AUTO_INCREMENT,username VARCHAR(50) UNIQUE,password VARCHAR(50), email VARCHAR(100) UNIQUE, mobile VARCHAR(15), college VARCHAR(100));
+
+CREATE TABLE post (id INT PRIMARY KEY AUTO_INCREMENT, title VARCHAR(50),userid INT, content VARCHAR(8000), imagepath VARCHAR(200), votes INT); 
+
+CREATE TABLE comments(id INT PRIMARY KEY AUTO_INCREMENT, username VARCHAR(50),content VARCHAR(200), postid INT);
+
+CREATE TABLE profile_picture(userid INT, imagepath VARCHAR(200));
+
+CREATE TABLE images(postid INT, imagepath VARCHAR(200));
+
